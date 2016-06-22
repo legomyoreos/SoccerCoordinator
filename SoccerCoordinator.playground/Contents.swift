@@ -145,9 +145,40 @@ var teamRaptors: [[String: String]] = []
 
 
 // Accessing Player Experience
+    // Placing in even teams
+
+for experiencedPlayer in playerRoster {
+    if experiencedPlayer["experience"] == "YES" {
+        if teamDragon.count < teamSharks.count {
+            teamDragon.append(experiencedPlayer)
+        } else if teamSharks.count < teamRaptors.count {
+            teamSharks.append(experiencedPlayer)
+        } else {
+            teamRaptors.append(experiencedPlayer)
+        }
+    }
+}
+
+for inexperiencedPlayer in playerRoster {
+    if inexperiencedPlayer["experience"] == "NO" {
+        if teamDragon.count < teamSharks.count {
+            teamDragon.append(inexperiencedPlayer)
+        } else if teamSharks.count < teamRaptors.count {
+            teamSharks.append(inexperiencedPlayer)
+        } else {
+            teamRaptors.append(inexperiencedPlayer)
+        }
+    }
+}
+
+print(teamDragon)
+print(teamSharks)
+print(teamRaptors)
 
 
-// playerRoster[0]["experience"]
+//////////////////////////
+// PERSONALIZED LETTERS //
+//////////////////////////
 
 
 
