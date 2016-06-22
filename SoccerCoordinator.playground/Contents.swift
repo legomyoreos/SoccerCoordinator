@@ -171,14 +171,40 @@ for inexperiencedPlayer in playerRoster {
     }
 }
 
-print(teamDragon)
-print(teamSharks)
-print(teamRaptors)
+//print(teamDragon)
+//print(teamSharks)
+//print(teamRaptors)
 
 
 //////////////////////////
 // PERSONALIZED LETTERS //
 //////////////////////////
+
+// Researched on Stack Overflow why my print statements said Optional("Sara and Jenny Bon") instead of just printing the names when using string interpolation. Suggested I use ! to get rid of it.
+
+for player in teamDragon {
+    print("Hello, \(player["guardian"]!). This letter is to inform you that \(player["name"]!) has been placed in Team Dragon! Please make sure that \(player["name"]!) attends the first team practice on March 17th at 1pm. Thank you! Enjoy the season.")
+}
+
+for player in teamSharks {
+    print("Hello, \(player["guardian"]!). This letter is to inform you that \(player["name"]!) has been placed in Team Sharks! Please make sure that \(player["name"]!) attends the first team practice on March 17th at 3pm. Thank you! Enjoy the season.")
+}
+
+for player in teamRaptors {
+    print("Hello, \(player["guardian"]!). This letter is to inform you that \(player["name"]!) has been placed in Team Raptors! Please make sure that \(player["name"]!) attends the first team practice on March 18th at 1pm. Thank you! Enjoy the season.")
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
